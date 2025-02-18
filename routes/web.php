@@ -31,7 +31,7 @@ Route::post('/Pet/salvar', [AnimalController::class,'store']);
 
 Route::delete('/Pet/excluir', [AnimalController::class,'destroy']);
 
-Route::put('/Pet/alterar', [RelatorioController::class,'update']);
+Route::put('/Pet/alterar', [AnimalController::class,'update']);
 
 Route::get('/relatorio', [RelatorioController::class,'gerarRelatorio']);
 

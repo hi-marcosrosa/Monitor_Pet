@@ -43,14 +43,18 @@ class AnimalController extends Controller
 
     public function edit(string $id)
     {
-        $Pet = Pet::find($id);
-        return view ('Pet.edit',['Pet'=> $Pet]);
+        // $Pet = Pet::find($id);
+        // return view ('Pet.edit',['Pet' => $Pet]);
+
+        $Pet = Pet::findOrFail($id);
+        return view('Pet.edit', compact('Pet'));
 
     }
 
 
     public function update(Request $request)
     {
+        
        $Pet = Pet::find($request->id);
        $Pet -> nome = $request->nome;
        $Pet -> descricao = $request->descricao;
