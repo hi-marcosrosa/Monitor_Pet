@@ -1,70 +1,79 @@
-<<<<<<< HEAD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Este projeto foi criado para permitir o cadastro de Animais e suas descrições e necessidades diárias como medicamentos específicos e horários de administração, tudo armazenado em um banco de dados. Com ele, você pode cadastrar informações como Nome e descrição. Gerar relatório dos animais.
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Este projeto foi desenvolvido por Marcos da Rosa Sotomaior.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+Cadastro de Animais.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+• Adicione informações de um novo Pet: nome e descrição.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Listagem de Pets.
 
-## Laravel Sponsors
+• Visualize todos os Pets cadastrados em uma tabela organizada.
+As informações são carregadas diretamente do banco de dados.
+Você pode atualizar a lista a qualquer momento para visualizar novos usuários.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Exclusão de Pets
 
-### Premium Partners
+• Exclua animais da lista com um simples clique.
+A exclusão é feita no Banco de Dados e a tabela é atualizada automaticamente.
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
 
-## Contributing
+ Tecnologias Utilizadas
+• HTML; CSS; JavaScript; Bootstrap; Banco de Dados; FrameWork Laravel.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
 
-## Security Vulnerabilities
+Como Usar
+1. Clone ou Baixe o Repositório
+Você pode clonar o repositório ou baixar como um arquivo zip:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+git clone https://github.com/seu-usuario/nome-do-projeto.git
 
-## License
+2. Abra o Projeto no Navegador
+Após clonar o repositório, abra o arquivo Pet.html no seu navegador. A página de cadastro estará pronta para ser usada!
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# Monitor_Pet
->>>>>>> 1aa6181368a68d1438362a94e063292aaf51bf5a
+3. Cadastro de Pets
+
+Clique no botão "Novo Pet" para cadastrar.
+Preencha os campos de cadastro com as informações do animal.
+Caso algum campo não esteja preenchido ou seja inválido, o sistema irá exibir um alerta.
+
+4. Relatório de Pets
+Para gerar relatório dos animais cadastrados, clique no botão "Gerar relatório".
+A lista de animais será exibida, e você poderá atualizar a tabela sempre que desejar.
+Para excluir um animal, basta clicar no botão "Excluir" ao lado do nome do animal.
+
+A interface foi projetada para ser simples, mas pode não ser totalmente otimizada para todos os dispositivos móveis. Ajustes podem ser necessários para telas muito pequenas.
+
+Configuração do Banco de dados PostgreSQL:
+
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=animaisestimacao
+DB_USERNAME=postgres
+DB_PASSWORD=postgres
+-----------------------------------------
+CREATE DATABASE animaisestimacao;
+
+CREATE TABLE pets(
+	codigo serial  NOT NULL,
+	nome varchar(300) NOT NULL,
+	descricao varchar(500) NOT NULL,
+	primary key (codigo)
+);
+
+
+insert into pets(nome,descricao)
+values( 'Spyke','  Spyke é um Labrador Retriever enérgico e brincalhão. Adora nadar e buscar objetos. Aspectos: Pelagem amarela, olhos castanhos, porte grande. Possíveis Problemas de Saúde: Displasia coxofemoral, otite Medicamentos:
+    Condroitina e Glucosamina (diariamente às 8h) Otomax (pomada auricular, 2x por semana)');
+
+insert into pets(nome,descricao)
+values('Poly',' Poly é uma gata Maine Coon sociável e afetuosa, conhecida por sua grande pelagem e presença majestosa. Aspectos: Pelagem longa e cinza, olhos verdes, porte grande. Possíveis Problemas de Saúde: Cardiomiopatia hipertrófica, obesidade Medicamentos: Atenolol (diariamente às 8h)
+    Ração para controle de peso (3x ao dia, 7h, 12h, 19h)');
