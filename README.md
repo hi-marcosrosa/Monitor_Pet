@@ -77,3 +77,11 @@ values( 'Spyke','  Spyke é um Labrador Retriever enérgico e brincalhão. Adora
 insert into pets(nome,descricao)
 values('Poly',' Poly é uma gata Maine Coon sociável e afetuosa, conhecida por sua grande pelagem e presença majestosa. Aspectos: Pelagem longa e cinza, olhos verdes, porte grande. Possíveis Problemas de Saúde: Cardiomiopatia hipertrófica, obesidade Medicamentos: Atenolol (diariamente às 8h)
     Ração para controle de peso (3x ao dia, 7h, 12h, 19h)');
+![Entidade](https://github.com/user-attachments/assets/f57daa94-48bd-4bb9-ba05-d695516c6b64)
+
+
+
+
+
+
+    
